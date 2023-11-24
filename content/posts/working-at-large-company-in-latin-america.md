@@ -59,3 +59,4 @@ at any time; without a *"Thank for your effort"*.
 ## Conclussions
 
 Enjoy your journey of this nice way of becomming a Technical Lead at a big company. It comes with small wins.
+
