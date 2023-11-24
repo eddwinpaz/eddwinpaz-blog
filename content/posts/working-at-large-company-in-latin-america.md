@@ -56,7 +56,29 @@ and sometimes do the work of more than 2 people.
 Becarefull and reconsider this. Because this could mean your health in the success of a company that could laid you off
 at any time; without a *"Thank for your effort"*.
 
+## Paper Developer
+Yeap, you become a developer on paper, because you wont spend much of your time developing code, but you still need to
+keep track of all the internal code decitions and check on pull requests often. as well in urgen times code without any
+context on things you didn't code on the first hand. and very quick!. Not to mention that if one of your developers goes
+on vacation; good luck with that!. you've just wont the lottery. because it's time to do the work of 2 people.
+
+## Hello meetings
+Sometimes you get meetings to solve issues or incomplete conversation subjects that were not solved. that could simply
+be a Email or small message over Microsoft Teams. You will have sometimes to decide weather you attend one meeting or
+another. and spend long hours of talking and presenting your updates and at the same time be eyes on your work and
+other's peoples work. fast!!!!
+
+## Working Tools
+you could be lucky to get the latest tech, nice macbook pro m2, not my case. but you have to start using boring tools
+and unusefull tools that are not related to your personal tools such as github, gitlab, kubernetes, linux. you would be
+lucky to have documentation. if not then you must take my advice on ** Rust Hour ** and not allowed to install tools
+that are not licensed such as docker desktop, because for companies it's another story. Microsoft Outlook to check
+inmense amounts of emails stack together with no common order. and still keep your mental sanity. 
+
+
 ## Conclussions
 
-Enjoy your journey of this nice way of becomming a Technical Lead at a big company. It comes with small wins.
+Enjoy your journey of this nice way of becomming a Technical Lead at a big company. It comes with small wins. lots of
+politics, extra hours, lots of meetings. Being a Technical Lead it's kind of a middle brother. you always get what's
+left from your older brother.
 
