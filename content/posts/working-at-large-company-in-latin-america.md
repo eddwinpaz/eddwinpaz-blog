@@ -82,3 +82,4 @@ Enjoy your journey of this nice way of becomming a Technical Lead at a big compa
 politics, extra hours, lots of meetings. Being a Technical Lead it's kind of a middle brother. you always get what's
 left from your older brother.
 
+

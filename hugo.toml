@@ -1,0 +1,4 @@
+baseURL = 'https://example.org/'
+languageCode = 'es-CL'
+title = 'Daily Developer'
+theme = 'etch'
