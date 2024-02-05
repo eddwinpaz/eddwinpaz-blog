@@ -1,4 +1,4 @@
-baseURL = 'https://main.d3gzmk482ca9xl.amplifyapp.com/'
+baseURL = 'https://blog.aparicio.dev/'
 languageCode = 'es-CL'
-title = 'Daily Developer'
+title = 'La vida de un Dev'
 theme = 'etch'
