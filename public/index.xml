@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Daily Developer</title>
-    <link>https://example.org/</link>
-    <description>Recent content on Daily Developer</description>
+    <title>Developer&#39;s Daily</title>
+    <link>https://blog.aparicio.dev/</link>
+    <description>Recent content on Developer&#39;s Daily</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-CL</language>
     <lastBuildDate>Fri, 24 Nov 2023 12:55:36 -0300</lastBuildDate>
     
-	<atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.aparicio.dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     
     <item>
       <title>Working at Large Company in Latin America as TL</title>
-      <link>https://example.org/posts/working-at-large-company-in-latin-america/</link>
+      <link>https://blog.aparicio.dev/posts/working-at-large-company-in-latin-america/</link>
       <pubDate>Fri, 24 Nov 2023 12:55:36 -0300</pubDate>
       
-      <guid>https://example.org/posts/working-at-large-company-in-latin-america/</guid>
+      <guid>https://blog.aparicio.dev/posts/working-at-large-company-in-latin-america/</guid>
       <description>&lt;h2 id=&#34;onboarding&#34;&gt;OnBoarding&lt;/h2&gt;
 &lt;p&gt;Like any other company there is a onboarding path you must follow. this can be; configuring your VPN, Credential setup,
 etc..&lt;/p&gt;

@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/</loc>
+    <loc>https://blog.aparicio.dev/</loc>
     <lastmod>2023-11-24T12:55:36-03:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://blog.aparicio.dev/posts/</loc>
     <lastmod>2023-11-24T12:55:36-03:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/working-at-large-company-in-latin-america/</loc>
+    <loc>https://blog.aparicio.dev/posts/working-at-large-company-in-latin-america/</loc>
     <lastmod>2023-11-24T12:55:36-03:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://blog.aparicio.dev/categories/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://blog.aparicio.dev/tags/</loc>
   </url>
 </urlset>
