@@ -1,4 +1,4 @@
 baseURL = 'https://blog.aparicio.dev/'
 languageCode = 'es-CL'
-title = 'La vida de un Dev'
+title = "Developer's Daily"
 theme = 'etch'
