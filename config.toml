@@ -1,4 +1,4 @@
-baseURL = 'https://blog.aparicio.dev/'
+baseURL = 'https://eddwin.dev/'
 languageCode = 'es-CL'
 title = "Developer's Daily"
 theme = 'etch'
