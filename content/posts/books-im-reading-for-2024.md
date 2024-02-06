@@ -5,32 +5,40 @@ draft = false
 +++
 
 
-## Here's the text with a bit more flavor:
+Here's the text with a bit more flavor I've got a stack of books I'm committed to diving into
 
-I've got a stack of books I'm committed to diving into:
-
-## Efficient Linux at the Command Line' by Daniel J. Barret
+### Efficient Linux at the Command Line' by Daniel J. Barret
 
 Talks about how to excel your skills when using the terminal
 
-## The Rust Programming Language' by Steve Klabnik & Carol Nichols
+link: https://a.co/d/3ROEBBL
+
+### The Rust Programming Language' by Steve Klabnik & Carol Nichols
 
 Shows different ways to work with rust language from medium to advance
 
-## David Rockefeller Memoirs' by an Author I can't wait to discover
+link: https://a.co/d/crc7wGG
+
+### David Rockefeller Memoirs' by an Author I can't wait to discover
 
 Shows David's life from point of view, and shows his family evolution
 
-## Mañana en la Batalla Piensa en Mí' by the talented Javier Marias
+link: https://a.co/d/1Ciz0QF
+
+### Mañana en la Batalla Piensa en Mí' by the talented Javier Marias
 
 It's a nice funny story of two random people meeting and when they are about to have sex
 the girl dies in front of him; and he doesn't know what to do.
 
-## Seeing like a State' by the insightful James C. Scott
+link: https://a.co/d/dOPJfHY
+
+### Seeing like a State' by the insightful James C. Scott
 
 Shows a way governments when doing their best to enhance people's lifes, they make it worse sometimes.
 
-## Conclusions
+link: https://a.co/d/5dHIrC3
 
-It's quite a diverse collection, carefully curated to enrich my knowledge and enhance my reading experience. 
+### Conclusions
+
+It's quite a diverse collection, carefully curated to enrich my knowledge and enhance my reading experience.
 If I come across any exciting new titles, you can bet I'll update this post with them.
