@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.aparicio.dev/</loc>
+    <loc>https://eddwin.dev/</loc>
     <lastmod>2023-11-24T12:55:36-03:00</lastmod>
   </url><url>
-    <loc>https://blog.aparicio.dev/posts/</loc>
+    <loc>https://eddwin.dev/posts/</loc>
     <lastmod>2023-11-24T12:55:36-03:00</lastmod>
   </url><url>
-    <loc>https://blog.aparicio.dev/posts/working-at-large-company-in-latin-america/</loc>
+    <loc>https://eddwin.dev/posts/working-at-large-company-in-latin-america/</loc>
     <lastmod>2023-11-24T12:55:36-03:00</lastmod>
   </url><url>
-    <loc>https://blog.aparicio.dev/categories/</loc>
+    <loc>https://eddwin.dev/categories/</loc>
   </url><url>
-    <loc>https://blog.aparicio.dev/tags/</loc>
+    <loc>https://eddwin.dev/tags/</loc>
   </url>
 </urlset>
