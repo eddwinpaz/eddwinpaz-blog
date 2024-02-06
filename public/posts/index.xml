@@ -6,28 +6,45 @@
     <description>Recent content in Posts on Developer&#39;s Daily</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-CL</language>
-    <lastBuildDate>Mon, 05 Feb 2024 22:47:45 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 05 Feb 2024 22:49:45 -0300</lastBuildDate>
     
 	<atom:link href="https://eddwin.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
     <item>
-      <title>Books Im Reading for 2024</title>
+      <title>Transformation Not Only Happens in Software</title>
+      <link>https://eddwin.dev/posts/transformation-not-only-happens-in-software/</link>
+      <pubDate>Mon, 05 Feb 2024 22:49:45 -0300</pubDate>
+      
+      <guid>https://eddwin.dev/posts/transformation-not-only-happens-in-software/</guid>
+      <description></description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Books I&#39;m Reading for 2024</title>
       <link>https://eddwin.dev/posts/books-im-reading-for-2024/</link>
       <pubDate>Mon, 05 Feb 2024 22:47:45 -0300</pubDate>
       
       <guid>https://eddwin.dev/posts/books-im-reading-for-2024/</guid>
       <description>&lt;h2 id=&#34;heres-the-text-with-a-bit-more-flavor&#34;&gt;Here&amp;rsquo;s the text with a bit more flavor:&lt;/h2&gt;
-&lt;p&gt;&amp;ldquo;I&amp;rsquo;ve got a stack of books I&amp;rsquo;m committed to diving into:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Efficient Linux at the Command Line&amp;rsquo; by Daniel J. Barret&lt;/li&gt;
-&lt;li&gt;The Rust Programming Language&amp;rsquo; by Steve Klabnik &amp;amp; Carol Nichols&lt;/li&gt;
-&lt;li&gt;David Rockefeller Memoirs&amp;rsquo; by an Author I can&amp;rsquo;t wait to discover&lt;/li&gt;
-&lt;li&gt;Mañana en la Batalla Piensa en Mí&amp;rsquo; by the talented Javier Marias&lt;/li&gt;
-&lt;li&gt;Seeing like a State&amp;rsquo; by the insightful James C. Scott&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It&amp;rsquo;s quite a diverse collection, carefully curated to enrich my knowledge and enhance my reading experience. If I come across any exciting new titles, you can bet I&amp;rsquo;ll update this post with them.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve got a stack of books I&amp;rsquo;m committed to diving into:&lt;/p&gt;
+&lt;h2 id=&#34;efficient-linux-at-the-command-line-by-daniel-j-barret&#34;&gt;Efficient Linux at the Command Line&amp;rsquo; by Daniel J. Barret&lt;/h2&gt;
+&lt;p&gt;Talks about how to excel your skills when using the terminal&lt;/p&gt;
+&lt;h2 id=&#34;the-rust-programming-language-by-steve-klabnik--carol-nichols&#34;&gt;The Rust Programming Language&amp;rsquo; by Steve Klabnik &amp;amp; Carol Nichols&lt;/h2&gt;
+&lt;p&gt;Shows different ways to work with rust language from medium to advance&lt;/p&gt;
+&lt;h2 id=&#34;david-rockefeller-memoirs-by-an-author-i-cant-wait-to-discover&#34;&gt;David Rockefeller Memoirs&amp;rsquo; by an Author I can&amp;rsquo;t wait to discover&lt;/h2&gt;
+&lt;p&gt;Shows David&amp;rsquo;s life from point of view, and shows his family evolution&lt;/p&gt;
+&lt;h2 id=&#34;mañana-en-la-batalla-piensa-en-mí-by-the-talented-javier-marias&#34;&gt;Mañana en la Batalla Piensa en Mí&amp;rsquo; by the talented Javier Marias&lt;/h2&gt;
+&lt;p&gt;It&amp;rsquo;s a nice funny story of two random people meeting and when they are about to have sex
+the girl dies in front of him; and he doesn&amp;rsquo;t know what to do.&lt;/p&gt;
+&lt;h2 id=&#34;seeing-like-a-state-by-the-insightful-james-c-scott&#34;&gt;Seeing like a State&amp;rsquo; by the insightful James C. Scott&lt;/h2&gt;
+&lt;p&gt;Shows a way governments when doing their best to enhance people&amp;rsquo;s lifes, they make it worse sometimes.&lt;/p&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;It&amp;rsquo;s quite a diverse collection, carefully curated to enrich my knowledge and enhance my reading experience.
+If I come across any exciting new titles, you can bet I&amp;rsquo;ll update this post with them.&lt;/p&gt;
 </description>
     </item>
     
