@@ -1,4 +1,4 @@
 baseURL = 'https://eddwin.dev/'
-languageCode = 'es-CL'
-title = "Developer's Daily"
+languageCode = 'en-US'
+title = "Eddwin's Software Daily"
 theme = 'etch'
