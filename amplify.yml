@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands: 
+        - wget https://github.com/gohugoio/hugo/releases/download/v0.122.0/hugo_extended_0.122.0_Linux-64bit.tar.gz
+        - tar -xf hugo_extended_0.122.0_Linux-64bit.tar.gz hugo
+        - mv hugo /usr/bin/hugo
+        - rm -rf hugo_extended_0.122.0_Linux-64bit.tar.gz
+        - hugo
+  artifacts:
+    baseDirectory: public
+    files:
+      - '**/*'
+  cache:
+    paths: []
