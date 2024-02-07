@@ -14,3 +14,9 @@ hugo --buildFuture
 hugo server
 hugo serve
 ```
+
+### Create new blog post
+
+```
+hugo new content posts/my-first-post.md
+```
