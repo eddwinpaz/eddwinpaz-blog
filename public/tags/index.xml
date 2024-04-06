@@ -5,6 +5,194 @@
     <link>https://eddwin.dev/tags/</link>
     <description>Recent content in Tags on Eddwin&#39;s Daily</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language><atom:link href="https://eddwin.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-US</language>
+    
+	<atom:link href="https://eddwin.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Write Messge on LCD Screen With i2C using Rust Language and ESP32-C3</title>
+      <link>https://eddwin.dev/posts/write-message-on-lcd-screen-i2c-rust-language-and-esp32/</link>
+      <pubDate>Fri, 05 Apr 2024 22:47:45 -0300</pubDate>
+      
+      <guid>https://eddwin.dev/posts/write-message-on-lcd-screen-i2c-rust-language-and-esp32/</guid>
+      <description>&lt;p&gt;Rust is a great language, so since we&amp;rsquo;ve heard so far that is one great programming language to build embedded systems, why not create a program
+that writes messages on a LCD Screen. In this case we will be using a I2C LCD Screen. A ESP32-C3 and Rust Language using Standard Library and Espressif Framework.&lt;/p&gt;
+&lt;h3 id=&#34;rust-as-a-firmware-platform&#34;&gt;Rust as a Firmware platform&lt;/h3&gt;
+&lt;p&gt;In comparison to Arduino is way better since you don&amp;rsquo;t depend on limitations of wrappers. In this case you will touch
+metal right away.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s start by creating a template project; for this you need to install rust. for more information on how to install it
+go to &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;https://www.rust-lang.org/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;lets-get-our-hands-dirty&#34;&gt;Let&amp;rsquo;s get our hands dirty&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cargo generate --git https://github.com/esp-rs/esp-idf-template.git --name esp32-c3-lcd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;enter now on your folder esp32-c3-lcd and look up for the /src/main.rs&lt;/p&gt;
+&lt;p&gt;now make sure you can build the hello world. by runningthe following command.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cargo build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
+&lt;p&gt;after done this and works fine. we now need to modify our dependencies. Cargo.toml&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;dependencies&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+log &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; version &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.4&amp;#34;&lt;/span&gt;, default-features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+esp-idf-svc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; version &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.48&amp;#34;&lt;/span&gt;, default-features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+ssd1306 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.8.4&amp;#34;&lt;/span&gt;
+embedded-graphics &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.8.1&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-it-work&#34;&gt;Make it work&lt;/h3&gt;
+&lt;p&gt;now Lets update the main.rs with the following code.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rs&#34; data-lang=&#34;rs&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; embedded_graphics::{mono_font::{MonoTextStyle, ascii::FONT_10X20}, pixelcolor::BinaryColor, text::Text, geometry::Point, Drawable, primitives::{Circle, PrimitiveStyle, Primitive}};
+&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; esp_idf_svc::hal::{peripherals::Peripherals, i2c, units::FromValueType, delay::FreeRtos};
+&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ssd1306::{Ssd1306, size::DisplaySize72x40, rotation::DisplayRotation, I2CDisplayInterface};
+&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ssd1306::mode::DisplayConfig;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+
+    esp_idf_svc::sys::link_patches();
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; peripherals &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Peripherals::take().unwrap();
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; scl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; peripherals.pins.gpio6;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; sda &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; peripherals.pins.gpio5;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; config &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i2c::config::Config::new().baudrate(FromValueType::kHz(&lt;span style=&#34;color:#ae81ff&#34;&gt;400&lt;/span&gt;).into());
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; _i2c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i2c::I2cDriver::new(peripherals.i2c0, sda, scl, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;config).unwrap();
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; interface &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; I2CDisplayInterface::new(_i2c);
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Ssd1306::new(interface, DisplaySize72x40, DisplayRotation::Rotate0).into_buffered_graphics_mode();
+
+    display.init().expect(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Screen Error&amp;#34;&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; style &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; MonoTextStyle::new(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;FONT_10X20, BinaryColor::On);
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;loop&lt;/span&gt; {
+        &lt;span style=&#34;color:#75715e&#34;&gt;// Hello World Text
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showing hola&amp;#34;&lt;/span&gt;);
+        Text::new(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;HOLA&amp;#34;&lt;/span&gt;, Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;17&lt;/span&gt;), style).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+        display.flush().unwrap();
+        display.clear_buffer();
+        FreeRtos::delay_ms(&lt;span style=&#34;color:#ae81ff&#34;&gt;2000&lt;/span&gt;);
+
+        println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showting mundo&amp;#34;&lt;/span&gt;);
+        Text::new(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MUNDO&amp;#34;&lt;/span&gt;, Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;17&lt;/span&gt;), style).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+        display.flush().unwrap();
+        display.clear_buffer();
+        FreeRtos::delay_ms(&lt;span style=&#34;color:#ae81ff&#34;&gt;2000&lt;/span&gt;);
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// Create Circle
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showing circle&amp;#34;&lt;/span&gt;);
+        Circle::new(Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;36&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+        Circle::new(Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;28&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+         Circle::new(Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;38&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+
+        display.flush().unwrap();
+        display.clear_buffer();
+        FreeRtos::delay_ms(&lt;span style=&#34;color:#ae81ff&#34;&gt;2000&lt;/span&gt;);
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;now as you see we created A text and a Circle. take into account that you need to configure your baudrate, as well your
+scl and sda Gpio pin peripherals.&lt;/p&gt;
+&lt;h3 id=&#34;execute&#34;&gt;Execute!&lt;/h3&gt;
+&lt;p&gt;Now we need to run the following commands.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cargo build &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cargo flash &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cargo flash monitor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Books I&#39;m Reading for 2024</title>
+      <link>https://eddwin.dev/posts/books-im-reading-for-2024/</link>
+      <pubDate>Mon, 05 Feb 2024 22:47:45 -0300</pubDate>
+      
+      <guid>https://eddwin.dev/posts/books-im-reading-for-2024/</guid>
+      <description>&lt;p&gt;Here&amp;rsquo;s the text with a bit more flavor I&amp;rsquo;ve got a stack of books I&amp;rsquo;m committed to diving into&lt;/p&gt;
+&lt;h3 id=&#34;efficient-linux-at-the-command-line-by-daniel-j-barret&#34;&gt;Efficient Linux at the Command Line&#39; by Daniel J. Barret&lt;/h3&gt;
+&lt;p&gt;Talks about how to excel your skills when using the terminal&lt;/p&gt;
+&lt;p&gt;link: &lt;a href=&#34;https://a.co/d/3ROEBBL&#34;&gt;https://a.co/d/3ROEBBL&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-rust-programming-language-by-steve-klabnik--carol-nichols&#34;&gt;The Rust Programming Language&#39; by Steve Klabnik &amp;amp; Carol Nichols&lt;/h3&gt;
+&lt;p&gt;Shows different ways to work with rust language from medium to advance&lt;/p&gt;
+&lt;p&gt;link: &lt;a href=&#34;https://a.co/d/crc7wGG&#34;&gt;https://a.co/d/crc7wGG&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;david-rockefeller-memoirs-by-an-author-i-cant-wait-to-discover&#34;&gt;David Rockefeller Memoirs&#39; by an Author I can&amp;rsquo;t wait to discover&lt;/h3&gt;
+&lt;p&gt;Shows David&amp;rsquo;s life from point of view, and shows his family evolution&lt;/p&gt;
+&lt;p&gt;link: &lt;a href=&#34;https://a.co/d/1Ciz0QF&#34;&gt;https://a.co/d/1Ciz0QF&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;mañana-en-la-batalla-piensa-en-mí-by-the-talented-javier-marias&#34;&gt;Mañana en la Batalla Piensa en Mí&#39; by the talented Javier Marias&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s a nice funny story of two random people meeting and when they are about to have sex
+the girl dies in front of him; and he doesn&amp;rsquo;t know what to do.&lt;/p&gt;
+&lt;p&gt;link: &lt;a href=&#34;https://a.co/d/dOPJfHY&#34;&gt;https://a.co/d/dOPJfHY&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;seeing-like-a-state-by-the-insightful-james-c-scott&#34;&gt;Seeing like a State&#39; by the insightful James C. Scott&lt;/h3&gt;
+&lt;p&gt;Shows a way governments when doing their best to enhance people&amp;rsquo;s lifes, they make it worse sometimes.&lt;/p&gt;
+&lt;p&gt;link: &lt;a href=&#34;https://a.co/d/5dHIrC3&#34;&gt;https://a.co/d/5dHIrC3&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s quite a diverse collection, carefully curated to enrich my knowledge and enhance my reading experience.
+If I come across any exciting new titles, you can bet I&amp;rsquo;ll update this post with them.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Working at Large Company in Latin America as TL</title>
+      <link>https://eddwin.dev/posts/working-at-large-company-in-latin-america/</link>
+      <pubDate>Fri, 24 Nov 2023 12:55:36 -0300</pubDate>
+      
+      <guid>https://eddwin.dev/posts/working-at-large-company-in-latin-america/</guid>
+      <description>&lt;h2 id=&#34;onboarding&#34;&gt;OnBoarding&lt;/h2&gt;
+&lt;p&gt;Like any other company there is a onboarding path you must follow. this can be; configuring your VPN, Credential setup,
+etc..&lt;/p&gt;
+&lt;p&gt;After this. you dont really start coding, about a week later; after you meet your peers. at first is really interesting.
+and the reason of this is due to the fact that you only know the tip of the iceberg.&lt;/p&gt;
+&lt;p&gt;after this you start getting basic tasks, and doing some shadow work with other collegue or supervisor. this is just to
+get you hands on making your first baby steps inside the company.&lt;/p&gt;
+&lt;p&gt;after you have&#39; learned to walk. you start getting more tasks and the flow starts going faster. and you know that the
+garden is not as greener as you expected it to be on the interview for the role.&lt;/p&gt;
+&lt;h2 id=&#34;day-to-day&#34;&gt;Day to day&lt;/h2&gt;
+&lt;p&gt;Here is when you start seeing all improvements you can make from your side to the company. due to the fact you are not
+intoxicaded with the culture and whereabouts of the company.&lt;/p&gt;
+&lt;p&gt;You become more of a nice solving problem machine, and this is well accepted by your peers and your supervisor. untill
+you start asking the right questions about. &amp;ldquo;Can we implement this?&amp;rdquo;, &amp;ldquo;Is possible to apply some of this ideas in the
+short term?&amp;rdquo; and some times the answer is yes, and most of the time is a big &amp;ldquo;nope&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;then you start to realize that to build up your team and set everything, so your developers can get done their work.
+They need to have everything ready to roll. and the issue here is due to the fragmentation of responsabilities; things
+get reallly slow. And I mean really slow. sometimes. moving code from developers machine to a simple sandbox can be so
+tedious due to authorization and corporate hirarchy that many people must go in sync with the task. Like we would be
+doing some kind of musical where everyone is dancing on a choreography.&lt;/p&gt;
+&lt;p&gt;And this is just for the development stage at early stages of the development procress of the project.&lt;/p&gt;
+&lt;h2 id=&#34;friends-and-family&#34;&gt;Friends and Family&lt;/h2&gt;
+&lt;p&gt;You start having a nice time with your work collegues, some of them will be removed from the project due to performance,
+others will be simply laid off; So don&amp;rsquo;t attach to much to people, because you don&amp;rsquo;t know when they&amp;rsquo;ll go away. Remember
+you are there because your work it&amp;rsquo;s worth something for what you deliver. this myth of the family is a total lie. just
+do your work, be nice and &lt;em&gt;&lt;strong&gt;&amp;ldquo;always be prepared to leave&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;rush-hour&#34;&gt;Rush hour&lt;/h2&gt;
+&lt;p&gt;When things get tough you need to excel your way of solving problems, since you need to keep focus on so many things at
+the same time, its key to take notes. even the minor thing can become important in the future. I recommend to use
+Obsidian or Hugo CMS to store your ideas and make them searchable. remember you should trust your notes, and not your
+memory.&lt;/p&gt;
+&lt;p&gt;On the hirarchy ladder you are in a position of a leader with no authority, you cannot do so many things and still you
+need to deliver, so persuation is key on this role. Others will push you up to do so as quick as possible. because your bosses boss needs to gain some policital
+token. So he will ask you to work late, do extra hours (sometimes no extra pay) and do other&amp;rsquo;s people work
+and sometimes do the work of more than 2 people.&lt;/p&gt;
+&lt;p&gt;Becarefull and reconsider this. Because this could mean your health in the success of a company that could laid you off
+at any time; without a &lt;em&gt;&amp;ldquo;Thank for your effort&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;paper-developer&#34;&gt;Paper Developer&lt;/h2&gt;
+&lt;p&gt;Yeap, you become a developer on paper, because you wont spend much of your time developing code, but you still need to
+keep track of all the internal code decitions and check on pull requests often. as well in urgen times code without any
+context on things you didn&amp;rsquo;t code on the first hand. and very quick!. Not to mention that if one of your developers goes
+on vacation; good luck with that!. you&amp;rsquo;ve just wont the lottery. because it&amp;rsquo;s time to do the work of 2 people.&lt;/p&gt;
+&lt;h2 id=&#34;hello-meetings&#34;&gt;Hello meetings&lt;/h2&gt;
+&lt;p&gt;Sometimes you get meetings to solve issues or incomplete conversation subjects that were not solved. that could simply
+be a Email or small message over Microsoft Teams. You will have sometimes to decide weather you attend one meeting or
+another. and spend long hours of talking and presenting your updates and at the same time be eyes on your work and
+other&amp;rsquo;s peoples work. fast!!!!&lt;/p&gt;
+&lt;h2 id=&#34;working-tools&#34;&gt;Working Tools&lt;/h2&gt;
+&lt;p&gt;you could be lucky to get the latest tech, nice macbook pro m2, not my case. but you have to start using boring tools
+and unusefull tools that are not related to your personal tools such as github, gitlab, kubernetes, linux. you would be
+lucky to have documentation. if not then you must take my advice on ** Rust Hour ** and not allowed to install tools
+that are not licensed such as docker desktop, because for companies it&amp;rsquo;s another story. Microsoft Outlook to check
+inmense amounts of emails stack together with no common order. and still keep your mental sanity.&lt;/p&gt;
+&lt;h2 id=&#34;conclussions&#34;&gt;Conclussions&lt;/h2&gt;
+&lt;p&gt;Enjoy your journey of this nice way of becomming a Technical Lead at a big company. It comes with small wins. lots of
+politics, extra hours, lots of meetings. Being a Technical Lead it&amp;rsquo;s kind of a middle brother. you always get what&amp;rsquo;s
+left from your older brother.&lt;/p&gt;
+</description>
+    </item>
+    
+    
   </channel>
 </rss>

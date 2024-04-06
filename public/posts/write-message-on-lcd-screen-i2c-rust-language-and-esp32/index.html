@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="https://eddwin.dev/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="canonical" href="https://eddwin.dev/posts/write-message-on-lcd-screen-i2c-rust-language-and-esp32/" />
+    <title>Write Messge on LCD Screen With i2C using Rust Language and ESP32-C3</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://eddwin.dev/">Eddwin&#39;s Daily</a></h2>
+    <nav>
+        <ul>
+            
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Write Messge on LCD Screen With i2C using Rust Language and ESP32-C3</h1>
+        <div>
+                <time>April 5, 2024</time>
+            </div>
+    </header><p>Rust is a great language, so since we&rsquo;ve heard so far that is one great programming language to build embedded systems, why not create a program
+that writes messages on a LCD Screen. In this case we will be using a I2C LCD Screen. A ESP32-C3 and Rust Language using Standard Library and Espressif Framework.</p>
+<h3 id="rust-as-a-firmware-platform">Rust as a Firmware platform</h3>
+<p>In comparison to Arduino is way better since you don&rsquo;t depend on limitations of wrappers. In this case you will touch
+metal right away.</p>
+<p>Let&rsquo;s start by creating a template project; for this you need to install rust. for more information on how to install it
+go to <a href="https://www.rust-lang.org/">https://www.rust-lang.org/</a></p>
+<h3 id="lets-get-our-hands-dirty">Let&rsquo;s get our hands dirty</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cargo generate --git https://github.com/esp-rs/esp-idf-template.git --name esp32-c3-lcd
+</code></pre></div><p>enter now on your folder esp32-c3-lcd and look up for the /src/main.rs</p>
+<p>now make sure you can build the hello world. by runningthe following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cargo build
+</code></pre></div><h3 id="dependencies">Dependencies</h3>
+<p>after done this and works fine. we now need to modify our dependencies. Cargo.toml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">[</span>dependencies<span style="color:#f92672">]</span>
+log <span style="color:#f92672">=</span> <span style="color:#f92672">{</span> version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.4&#34;</span>, default-features <span style="color:#f92672">=</span> false <span style="color:#f92672">}</span>
+esp-idf-svc <span style="color:#f92672">=</span> <span style="color:#f92672">{</span> version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.48&#34;</span>, default-features <span style="color:#f92672">=</span> false <span style="color:#f92672">}</span>
+ssd1306 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.8.4&#34;</span>
+embedded-graphics <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.8.1&#34;</span>
+</code></pre></div><h3 id="make-it-work">Make it work</h3>
+<p>now Lets update the main.rs with the following code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">use</span> embedded_graphics::{mono_font::{MonoTextStyle, ascii::FONT_10X20}, pixelcolor::BinaryColor, text::Text, geometry::Point, Drawable, primitives::{Circle, PrimitiveStyle, Primitive}};
+<span style="color:#66d9ef">use</span> esp_idf_svc::hal::{peripherals::Peripherals, i2c, units::FromValueType, delay::FreeRtos};
+<span style="color:#66d9ef">use</span> ssd1306::{Ssd1306, size::DisplaySize72x40, rotation::DisplayRotation, I2CDisplayInterface};
+<span style="color:#66d9ef">use</span> ssd1306::mode::DisplayConfig;
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+
+    esp_idf_svc::sys::link_patches();
+
+    <span style="color:#66d9ef">let</span> peripherals <span style="color:#f92672">=</span> Peripherals::take().unwrap();
+    <span style="color:#66d9ef">let</span> scl <span style="color:#f92672">=</span> peripherals.pins.gpio6;
+    <span style="color:#66d9ef">let</span> sda <span style="color:#f92672">=</span> peripherals.pins.gpio5;
+
+    <span style="color:#66d9ef">let</span> config <span style="color:#f92672">=</span> i2c::config::Config::new().baudrate(FromValueType::kHz(<span style="color:#ae81ff">400</span>).into());
+    <span style="color:#66d9ef">let</span> _i2c <span style="color:#f92672">=</span> i2c::I2cDriver::new(peripherals.i2c0, sda, scl, <span style="color:#f92672">&amp;</span>config).unwrap();
+    <span style="color:#66d9ef">let</span> interface <span style="color:#f92672">=</span> I2CDisplayInterface::new(_i2c);
+
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> display <span style="color:#f92672">=</span> Ssd1306::new(interface, DisplaySize72x40, DisplayRotation::Rotate0).into_buffered_graphics_mode();
+
+    display.init().expect(<span style="color:#e6db74">&#34;Screen Error&#34;</span>);
+    <span style="color:#66d9ef">let</span> style <span style="color:#f92672">=</span> MonoTextStyle::new(<span style="color:#f92672">&amp;</span>FONT_10X20, BinaryColor::On);
+
+    <span style="color:#66d9ef">loop</span> {
+        <span style="color:#75715e">// Hello World Text
+</span><span style="color:#75715e"></span>        println!(<span style="color:#e6db74">&#34;Showing hola&#34;</span>);
+        Text::new(<span style="color:#e6db74">&#34;HOLA&#34;</span>, Point::new(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">17</span>), style).draw(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> display).unwrap();
+        display.flush().unwrap();
+        display.clear_buffer();
+        FreeRtos::delay_ms(<span style="color:#ae81ff">2000</span>);
+
+        println!(<span style="color:#e6db74">&#34;Showting mundo&#34;</span>);
+        Text::new(<span style="color:#e6db74">&#34;MUNDO&#34;</span>, Point::new(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">17</span>), style).draw(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> display).unwrap();
+        display.flush().unwrap();
+        display.clear_buffer();
+        FreeRtos::delay_ms(<span style="color:#ae81ff">2000</span>);
+
+        <span style="color:#75715e">// Create Circle
+</span><span style="color:#75715e"></span>        println!(<span style="color:#e6db74">&#34;Showing circle&#34;</span>);
+        Circle::new(Point::new(<span style="color:#ae81ff">36</span>,<span style="color:#ae81ff">20</span>), <span style="color:#ae81ff">15</span>).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, <span style="color:#ae81ff">1</span>)).draw(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> display).unwrap();
+        Circle::new(Point::new(<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">18</span>), <span style="color:#ae81ff">3</span>).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, <span style="color:#ae81ff">1</span>)).draw(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> display).unwrap();
+         Circle::new(Point::new(<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">38</span>), <span style="color:#ae81ff">3</span>).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, <span style="color:#ae81ff">1</span>)).draw(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> display).unwrap();
+
+        display.flush().unwrap();
+        display.clear_buffer();
+        FreeRtos::delay_ms(<span style="color:#ae81ff">2000</span>);
+
+    }
+}
+</code></pre></div><p>now as you see we created A text and a Circle. take into account that you need to configure your baudrate, as well your
+scl and sda Gpio pin peripherals.</p>
+<h3 id="execute">Execute!</h3>
+<p>Now we need to run the following commands.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cargo build <span style="color:#f92672">&amp;&amp;</span> cargo flash <span style="color:#f92672">&amp;&amp;</span> cargo flash monitor
+</code></pre></div></article>
+
+        </main><footer id="footer">
+    
+</footer>
+</body>
+</html>
