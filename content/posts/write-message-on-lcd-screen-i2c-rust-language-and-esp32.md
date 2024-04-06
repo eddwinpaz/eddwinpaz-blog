@@ -4,16 +4,12 @@ date = 2024-04-05T22:47:45-03:00
 draft = false
 +++
 
-Rust is a great language, so since we've heard so far that is one great programming language to build embedded systems, why not create a program
-that writes messages on a LCD Screen. In this case we will be using a I2C LCD Screen. A ESP32-C3 and Rust Language using Standard Library and Espressif Framework.
+Rust stands out as an excellent language, particularly for developing embedded systems. Considering its prowess in this domain, why not embark on a project to create a program that displays messages on an LCD screen? Specifically, we'll utilize an I2C LCD Screen, along with an ESP32-C3 microcontroller, leveraging Rust's Standard Library and the Espressif Framework.
 
-### Rust as a Firmware platform
+Leveraging Rust for Firmware Development
+In contrast to Arduino, Rust offers distinct advantages by eliminating the need for cumbersome wrappers. With Rust, you dive straight into interacting with hardware at a low level.
 
-In comparison to Arduino is way better since you don't depend on limitations of wrappers. In this case you will touch
-metal right away.
-
-Let's start by creating a template project; for this you need to install rust. for more information on how to install it
-go to https://www.rust-lang.org/
+Let's kickstart this endeavor by setting up a template project. To begin, ensure Rust is installed. For detailed installation instructions, visit Rust's official website." go to https://www.rust-lang.org/
 
 ### Let's get our hands dirty
 
@@ -21,9 +17,9 @@ go to https://www.rust-lang.org/
 cargo generate --git https://github.com/esp-rs/esp-idf-template.git --name esp32-c3-lcd
 ```
 
-enter now on your folder esp32-c3-lcd and look up for the /src/main.rs
+Navigate to the 'esp32-c3-lcd' folder and locate the '/src/main.rs' file.
 
-now make sure you can build the hello world. by runningthe following command.
+Now, confirm that you can successfully build the 'hello world' program by running the following command:
 
 ```sh
 cargo build
@@ -31,7 +27,7 @@ cargo build
 
 ### Dependencies
 
-after done this and works fine. we now need to modify our dependencies. Cargo.toml
+After confirming the successful build of the 'hello world' program, it's time to update our dependencies in the 'Cargo.toml' file
 
 ```sh
 [dependencies]
@@ -43,7 +39,7 @@ embedded-graphics = "0.8.1"
 
 ### Make it work
 
-now Lets update the main.rs with the following code.
+Now, let's update the 'main.rs' file with the following code
 
 ```rs
 use embedded_graphics::{mono_font::{MonoTextStyle, ascii::FONT_10X20}, pixelcolor::BinaryColor, text::Text, geometry::Point, Drawable, primitives::{Circle, PrimitiveStyle, Primitive}};
@@ -96,12 +92,11 @@ fn main() {
 }
 ```
 
-now as you see we created A text and a Circle. take into account that you need to configure your baudrate, as well your
-scl and sda Gpio pin peripherals.
+Upon inspection, you'll notice that we've created a text and a circle. It's important to configure your baud rate, as well as your SCL and SDA GPIO pin peripherals to ensure proper functionality.
 
 ### Execute!
 
-Now we need to run the following commands.
+Now, execute the following commands:
 
 ```sh
 cargo build && cargo flash && cargo flash monitor

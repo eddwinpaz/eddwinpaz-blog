@@ -17,27 +17,24 @@
       <pubDate>Fri, 05 Apr 2024 22:47:45 -0300</pubDate>
       
       <guid>https://eddwin.dev/posts/write-message-on-lcd-screen-i2c-rust-language-and-esp32/</guid>
-      <description>&lt;p&gt;Rust is a great language, so since we&amp;rsquo;ve heard so far that is one great programming language to build embedded systems, why not create a program
-that writes messages on a LCD Screen. In this case we will be using a I2C LCD Screen. A ESP32-C3 and Rust Language using Standard Library and Espressif Framework.&lt;/p&gt;
-&lt;h3 id=&#34;rust-as-a-firmware-platform&#34;&gt;Rust as a Firmware platform&lt;/h3&gt;
-&lt;p&gt;In comparison to Arduino is way better since you don&amp;rsquo;t depend on limitations of wrappers. In this case you will touch
-metal right away.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s start by creating a template project; for this you need to install rust. for more information on how to install it
-go to &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;https://www.rust-lang.org/&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Rust stands out as an excellent language, particularly for developing embedded systems. Considering its prowess in this domain, why not embark on a project to create a program that displays messages on an LCD screen? Specifically, we&amp;rsquo;ll utilize an I2C LCD Screen, along with an ESP32-C3 microcontroller, leveraging Rust&amp;rsquo;s Standard Library and the Espressif Framework.&lt;/p&gt;
+&lt;p&gt;Leveraging Rust for Firmware Development
+In contrast to Arduino, Rust offers distinct advantages by eliminating the need for cumbersome wrappers. With Rust, you dive straight into interacting with hardware at a low level.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s kickstart this endeavor by setting up a template project. To begin, ensure Rust is installed. For detailed installation instructions, visit Rust&amp;rsquo;s official website.&amp;quot; go to &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;https://www.rust-lang.org/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;lets-get-our-hands-dirty&#34;&gt;Let&amp;rsquo;s get our hands dirty&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cargo generate --git https://github.com/esp-rs/esp-idf-template.git --name esp32-c3-lcd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;enter now on your folder esp32-c3-lcd and look up for the /src/main.rs&lt;/p&gt;
-&lt;p&gt;now make sure you can build the hello world. by runningthe following command.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Navigate to the &amp;lsquo;esp32-c3-lcd&amp;rsquo; folder and locate the &amp;lsquo;/src/main.rs&amp;rsquo; file.&lt;/p&gt;
+&lt;p&gt;Now, confirm that you can successfully build the &amp;lsquo;hello world&amp;rsquo; program by running the following command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cargo build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
-&lt;p&gt;after done this and works fine. we now need to modify our dependencies. Cargo.toml&lt;/p&gt;
+&lt;p&gt;After confirming the successful build of the &amp;lsquo;hello world&amp;rsquo; program, it&amp;rsquo;s time to update our dependencies in the &amp;lsquo;Cargo.toml&amp;rsquo; file&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;dependencies&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
 log &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; version &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.4&amp;#34;&lt;/span&gt;, default-features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 esp-idf-svc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; version &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.48&amp;#34;&lt;/span&gt;, default-features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 ssd1306 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.8.4&amp;#34;&lt;/span&gt;
 embedded-graphics &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.8.1&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-it-work&#34;&gt;Make it work&lt;/h3&gt;
-&lt;p&gt;now Lets update the main.rs with the following code.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;rsquo;s update the &amp;lsquo;main.rs&amp;rsquo; file with the following code&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rs&#34; data-lang=&#34;rs&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; embedded_graphics::{mono_font::{MonoTextStyle, ascii::FONT_10X20}, pixelcolor::BinaryColor, text::Text, geometry::Point, Drawable, primitives::{Circle, PrimitiveStyle, Primitive}};
 &lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; esp_idf_svc::hal::{peripherals::Peripherals, i2c, units::FromValueType, delay::FreeRtos};
 &lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ssd1306::{Ssd1306, size::DisplaySize72x40, rotation::DisplayRotation, I2CDisplayInterface};
@@ -86,10 +83,9 @@ embedded-graphics &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;s
 
     }
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;now as you see we created A text and a Circle. take into account that you need to configure your baudrate, as well your
-scl and sda Gpio pin peripherals.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Upon inspection, you&amp;rsquo;ll notice that we&amp;rsquo;ve created a text and a circle. It&amp;rsquo;s important to configure your baud rate, as well as your SCL and SDA GPIO pin peripherals to ensure proper functionality.&lt;/p&gt;
 &lt;h3 id=&#34;execute&#34;&gt;Execute!&lt;/h3&gt;
-&lt;p&gt;Now we need to run the following commands.&lt;/p&gt;
+&lt;p&gt;Now, execute the following commands:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cargo build &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cargo flash &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cargo flash monitor
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
