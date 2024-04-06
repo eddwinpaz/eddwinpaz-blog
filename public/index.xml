@@ -6,7 +6,17 @@
     <description>Recent content on Eddwin&#39;s Daily</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 05 Feb 2024 22:47:45 -0300</lastBuildDate><atom:link href="https://eddwin.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Apr 2024 22:47:45 -0300</lastBuildDate><atom:link href="https://eddwin.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Write Messge on LCD Screen With i2C using Rust Language and ESP32-C3</title>
+      <link>https://eddwin.dev/posts/write-message-on-lcd-screen-i2c-rust-language-and-esp32/</link>
+      <pubDate>Fri, 05 Apr 2024 22:47:45 -0300</pubDate>
+      
+      <guid>https://eddwin.dev/posts/write-message-on-lcd-screen-i2c-rust-language-and-esp32/</guid>
+      <description>Rust is a great language, so since we&amp;rsquo;ve heard so far that is one great programming language to build embedded systems, why not create a program that writes messages on a LCD Screen. In this case we will be using a I2C LCD Screen. A ESP32-C3 and Rust Language using Standard Library and Espressif Framework.
+The good In comparison to Arduino is way better since you don&amp;rsquo;t depend on limitations of wrappers.</description>
+    </item>
+    
     <item>
       <title>Books I&#39;m Reading for 2024</title>
       <link>https://eddwin.dev/posts/books-im-reading-for-2024/</link>
