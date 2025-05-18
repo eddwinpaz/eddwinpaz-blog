@@ -2,23 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://eddwin.dev/</loc>
+    <loc>http://localhost:40727/</loc>
+    <lastmod>2025-05-18T19:14:58-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:40727/posts/</loc>
+    <lastmod>2025-05-18T19:14:58-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:40727/posts/tragicomedia-un-desarrollador-promedio/</loc>
+    <lastmod>2025-05-18T18:09:11-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:40727/posts/write-messge-on-lcd-screen-with-i2c-using-rust-language-and-esp32-c3/</loc>
     <lastmod>2024-04-05T22:47:45-03:00</lastmod>
   </url><url>
-    <loc>https://eddwin.dev/posts/</loc>
-    <lastmod>2024-04-05T22:47:45-03:00</lastmod>
-  </url><url>
-    <loc>https://eddwin.dev/posts/write-message-on-lcd-screen-i2c-rust-language-and-esp32/</loc>
-    <lastmod>2024-04-05T22:47:45-03:00</lastmod>
-  </url><url>
-    <loc>https://eddwin.dev/posts/books-im-reading-for-2024/</loc>
+    <loc>http://localhost:40727/posts/books-im-reading-for-2024/</loc>
     <lastmod>2024-02-05T22:47:45-03:00</lastmod>
   </url><url>
-    <loc>https://eddwin.dev/posts/working-at-large-company-in-latin-america/</loc>
+    <loc>http://localhost:40727/posts/working-at-large-company-in-latin-america-as-tl/</loc>
     <lastmod>2023-11-24T12:55:36-03:00</lastmod>
   </url><url>
-    <loc>https://eddwin.dev/categories/</loc>
+    <loc>http://localhost:40727/categories/</loc>
   </url><url>
-    <loc>https://eddwin.dev/tags/</loc>
+    <loc>http://localhost:40727/tags/</loc>
   </url>
 </urlset>

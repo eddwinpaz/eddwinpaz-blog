@@ -2,118 +2,146 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Eddwin&#39;s Daily</title>
-    <link>https://eddwin.dev/posts/</link>
+    <link>http://localhost:40727/posts/</link>
     <description>Recent content in Posts on Eddwin&#39;s Daily</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 05 Apr 2024 22:47:45 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 18 May 2025 19:14:58 -0400</lastBuildDate>
     
-	<atom:link href="https://eddwin.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:40727/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Tragicomedia un desarrollador promedio</title>
+      <link>http://localhost:40727/posts/tragicomedia-un-desarrollador-promedio/</link>
+      <pubDate>Sun, 18 May 2025 18:09:11 -0400</pubDate>
+      
+      <guid>http://localhost:40727/posts/tragicomedia-un-desarrollador-promedio/</guid>
+      <description>&lt;h2 id=&#34;aclaratoria&#34;&gt;Aclaratoria&lt;/h2&gt;
+&lt;p&gt;En contraposición, todo depende de quién sea el desarrollador y de la persona que escribe este blog: alguien que soñaba con ser ingeniero petrolero… pero terminó de secretaria. No es la verdad, aunque se le parece. El propósito es exponer situaciones que tienen mucho y nada que ver con lo biográfico, pero que nacen de la vida cotidiana; al final, todo es una caricaturización pensada en voz alta.&lt;/p&gt;
+&lt;p&gt;Intercalando un diálogo interior libre de culpas y formalismos, se percibe un pequeño aire de disfrute: un goce sabroso en cada situación que compartiré.&lt;/p&gt;
+&lt;h2 id=&#34;inteligencia-artificial-y-el-ser-humano&#34;&gt;Inteligencia Artificial y el ser humano&lt;/h2&gt;
+&lt;p&gt;Hoy constatamos que la modernidad ha traído consigo la multidisciplinariedad y otros giros conceptuales de excelente gusto. Ha quedado claro que no se trata de pasar la vida en una carrera apoteósica para ser el mejor, sino de resetear los parámetros. Esta vertiginosa carrera llamada inteligencia artificial nos invita a detonar cada chispa intelectual en el momento preciso, nada que ver con esos códigos monótonos copiados de Stack Overflow o Foros del Web (se me cayó la cédula), sin la más mínima certeza de si llegarían a tiempo.&lt;/p&gt;
+&lt;p&gt;Así, de forma elocuente y sin rodeos, la IA se presenta auténtica y siempre capaz de sorprendernos. Hace años me dijeron una frase que llevaba esperando repetir: «bien instruido». No significa que sea perfecta.&lt;/p&gt;
+&lt;p&gt;Como seres pensantes, andamos como pollos sin cabeza buscando la próxima gran idea y, entonces, descubrimos que esa frase de oro escrita hace milenios por algunos sabios —«que la vida del hombre es un proceso de búsqueda infinito»— nosotros, los postmodernos, la hemos vulgarizado.&lt;/p&gt;
+&lt;p&gt;¿Vulgarizado? Porque vivimos un proceso de búsqueda sin fin, pero de tonterías: el mejor IDE, el teclado ergonómico, el monitor curvo.&lt;/p&gt;
+&lt;p&gt;Dando por hecho que lo que necesitamos es un chatbot; como peluqueras que se peinan unas a otras por falta de clientela, o palomas en las plazas que creen haberse saciado con cualquier migaja.&lt;/p&gt;
+&lt;p&gt;¿Cuál será la verdadera interfaz IA? ¿La definitiva, la que usemos a diario? ¡Quién sabe! Imagino algo heroico, al estilo &lt;strong&gt;Blade Runner&lt;/strong&gt; con un toque &lt;strong&gt;Apple Fan Boy&lt;/strong&gt; al que estamos acostumbrados. Todo para pedir una pizza un sábado por la noche, cuando no queremos cocinar. Lo imagino como ese problemilla de tener la tarjeta en el teléfono y que no pase por falta de saldo, y que la IA responda al estilo &lt;strong&gt;Clint Eastwood&lt;/strong&gt;: «breve como amor de cortesana».&lt;/p&gt;
+&lt;p&gt;Superarnos a nosotros mismos es absurdo. Caemos en el delirio de pensar que una IA puede sugestionar en un instante, brindándonos recomendaciones que orbitan en nuestra mente sin que nos demos cuenta.&lt;/p&gt;
+&lt;p&gt;Este fenómeno humano genera un problema: llegamos sin manual de instrucciones para operar nuestro propio ser. Que nuestra vida no se origine de una iniciativa propia, sino del descarte. Aquí es donde la verdadera IA debería ayudarnos: a encontrar ese propósito vital sin recurrir a un psicólogo de 20 dólares que categoriza todo como si fuera un sectario, etiquetándonos de «psicópata narcisista» si no encajamos.&lt;/p&gt;
+&lt;p&gt;En mi opinión, la IA no debe limitarse a ser un agente, un chatbot o un generador de código, sino el medio para que cada persona se reencuentre consigo misma: un manual operativo del individuo que, además de arreglarnos la vida, puede beneficiar a los demás. Porque, al buscar nuestro propio bien, invadimos el espacio ajeno y entorpecemos la búsqueda del otro.&lt;/p&gt;
+&lt;h2 id=&#34;al-grano&#34;&gt;Al grano&lt;/h2&gt;
+&lt;p&gt;Ante cualquier situación, no nos preguntemos cómo resolverá la IA, sino qué nos dice nuestro manual operativo. Como quienes acuden a las «traqueas» del hipódromo con la gaceta hípica en el bolsillo trasero, buscamos en sus páginas la elocuencia que nos guía.&lt;/p&gt;
+&lt;p&gt;El único inconveniente será preguntarse de qué vivirán Paulo Coelho, Deepak Chopra, Muñeca Geigel, Og Mandino o Lair Ribeiro.&lt;/p&gt;
+&lt;p&gt;¡Que se dediquen a programar!&lt;/p&gt;
+</description>
+    </item>
     
     
     
     <item>
       <title>Write Messge on LCD Screen With i2C using Rust Language and ESP32-C3</title>
-      <link>https://eddwin.dev/posts/write-message-on-lcd-screen-i2c-rust-language-and-esp32/</link>
+      <link>http://localhost:40727/posts/write-messge-on-lcd-screen-with-i2c-using-rust-language-and-esp32-c3/</link>
       <pubDate>Fri, 05 Apr 2024 22:47:45 -0300</pubDate>
       
-      <guid>https://eddwin.dev/posts/write-message-on-lcd-screen-i2c-rust-language-and-esp32/</guid>
+      <guid>http://localhost:40727/posts/write-messge-on-lcd-screen-with-i2c-using-rust-language-and-esp32-c3/</guid>
       <description>&lt;p&gt;Rust stands out as an excellent language, particularly for developing embedded systems. Considering its prowess in this domain, why not embark on a project to create a program that displays messages on an LCD screen? Specifically, we&amp;rsquo;ll utilize an I2C LCD Screen, along with an ESP32-C3 microcontroller, leveraging Rust&amp;rsquo;s Standard Library and the Espressif Framework.&lt;/p&gt;
 &lt;p&gt;Leveraging Rust for Firmware Development
 In contrast to Arduino, Rust offers distinct advantages by eliminating the need for cumbersome wrappers. With Rust, you dive straight into interacting with hardware at a low level.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s kickstart this endeavor by setting up a template project. To begin, ensure Rust is installed. For detailed installation instructions, visit Rust&amp;rsquo;s official website.&amp;quot; go to &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;https://www.rust-lang.org/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;lets-get-our-hands-dirty&#34;&gt;Let&amp;rsquo;s get our hands dirty&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cargo generate --git https://github.com/esp-rs/esp-idf-template.git --name esp32-c3-lcd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Navigate to the &amp;lsquo;esp32-c3-lcd&amp;rsquo; folder and locate the &amp;lsquo;/src/main.rs&amp;rsquo; file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo generate --git https://github.com/esp-rs/esp-idf-template.git --name esp32-c3-lcd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Navigate to the &amp;rsquo;esp32-c3-lcd&amp;rsquo; folder and locate the &amp;lsquo;/src/main.rs&amp;rsquo; file.&lt;/p&gt;
 &lt;p&gt;Now, confirm that you can successfully build the &amp;lsquo;hello world&amp;rsquo; program by running the following command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cargo build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
 &lt;p&gt;After confirming the successful build of the &amp;lsquo;hello world&amp;rsquo; program, it&amp;rsquo;s time to update our dependencies in the &amp;lsquo;Cargo.toml&amp;rsquo; file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;dependencies&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
-log &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; version &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.4&amp;#34;&lt;/span&gt;, default-features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-esp-idf-svc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; version &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.48&amp;#34;&lt;/span&gt;, default-features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-ssd1306 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.8.4&amp;#34;&lt;/span&gt;
-embedded-graphics &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.8.1&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-it-work&#34;&gt;Make it work&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;dependencies&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;log &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; version &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.4&amp;#34;&lt;/span&gt;, default-features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;esp-idf-svc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; version &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.48&amp;#34;&lt;/span&gt;, default-features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssd1306 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.8.4&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;embedded-graphics &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.8.1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-it-work&#34;&gt;Make it work&lt;/h3&gt;
 &lt;p&gt;Now, let&amp;rsquo;s update the &amp;lsquo;main.rs&amp;rsquo; file with the following code&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-rs&#34; data-lang=&#34;rs&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; embedded_graphics::{mono_font::{MonoTextStyle, ascii::FONT_10X20}, pixelcolor::BinaryColor, text::Text, geometry::Point, Drawable, primitives::{Circle, PrimitiveStyle, Primitive}};
-&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; esp_idf_svc::hal::{peripherals::Peripherals, i2c, units::FromValueType, delay::FreeRtos};
-&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ssd1306::{Ssd1306, size::DisplaySize72x40, rotation::DisplayRotation, I2CDisplayInterface};
-&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ssd1306::mode::DisplayConfig;
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
-
-    esp_idf_svc::sys::link_patches();
-
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; peripherals &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Peripherals::take().unwrap();
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; scl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; peripherals.pins.gpio6;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; sda &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; peripherals.pins.gpio5;
-
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; config &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i2c::config::Config::new().baudrate(FromValueType::kHz(&lt;span style=&#34;color:#ae81ff&#34;&gt;400&lt;/span&gt;).into());
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; _i2c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i2c::I2cDriver::new(peripherals.i2c0, sda, scl, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;config).unwrap();
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; interface &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; I2CDisplayInterface::new(_i2c);
-
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Ssd1306::new(interface, DisplaySize72x40, DisplayRotation::Rotate0).into_buffered_graphics_mode();
-
-    display.init().expect(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Screen Error&amp;#34;&lt;/span&gt;);
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; style &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; MonoTextStyle::new(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;FONT_10X20, BinaryColor::On);
-
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;loop&lt;/span&gt; {
-        &lt;span style=&#34;color:#75715e&#34;&gt;// Hello World Text
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showing hola&amp;#34;&lt;/span&gt;);
-        Text::new(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;HOLA&amp;#34;&lt;/span&gt;, Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;17&lt;/span&gt;), style).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
-        display.flush().unwrap();
-        display.clear_buffer();
-        FreeRtos::delay_ms(&lt;span style=&#34;color:#ae81ff&#34;&gt;2000&lt;/span&gt;);
-
-        println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showting mundo&amp;#34;&lt;/span&gt;);
-        Text::new(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MUNDO&amp;#34;&lt;/span&gt;, Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;17&lt;/span&gt;), style).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
-        display.flush().unwrap();
-        display.clear_buffer();
-        FreeRtos::delay_ms(&lt;span style=&#34;color:#ae81ff&#34;&gt;2000&lt;/span&gt;);
-
-        &lt;span style=&#34;color:#75715e&#34;&gt;// Create Circle
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showing circle&amp;#34;&lt;/span&gt;);
-        Circle::new(Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;36&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
-        Circle::new(Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;28&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
-         Circle::new(Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;38&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
-
-        display.flush().unwrap();
-        display.clear_buffer();
-        FreeRtos::delay_ms(&lt;span style=&#34;color:#ae81ff&#34;&gt;2000&lt;/span&gt;);
-
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Upon inspection, you&amp;rsquo;ll notice that we&amp;rsquo;ve created a text and a circle. It&amp;rsquo;s important to configure your baud rate, as well as your SCL and SDA GPIO pin peripherals to ensure proper functionality.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rs&#34; data-lang=&#34;rs&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; embedded_graphics::{mono_font::{MonoTextStyle, ascii::&lt;span style=&#34;color:#66d9ef&#34;&gt;FONT_10X20&lt;/span&gt;}, pixelcolor::BinaryColor, text::Text, geometry::Point, Drawable, primitives::{Circle, PrimitiveStyle, Primitive}};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; esp_idf_svc::hal::{peripherals::Peripherals, i2c, units::FromValueType, delay::FreeRtos};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ssd1306::{Ssd1306, size::DisplaySize72x40, rotation::DisplayRotation, I2CDisplayInterface};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ssd1306::mode::DisplayConfig;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    esp_idf_svc::sys::link_patches();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; peripherals &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Peripherals::take().unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; scl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; peripherals.pins.gpio6;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; sda &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; peripherals.pins.gpio5;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; config &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i2c::config::Config::new().baudrate(FromValueType::kHz(&lt;span style=&#34;color:#ae81ff&#34;&gt;400&lt;/span&gt;).into());
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; _i2c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i2c::I2cDriver::new(peripherals.i2c0, sda, scl, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;config).unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; interface &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; I2CDisplayInterface::new(_i2c);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Ssd1306::new(interface, DisplaySize72x40, DisplayRotation::Rotate0).into_buffered_graphics_mode();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    display.init().expect(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Screen Error&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; style &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; MonoTextStyle::new(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FONT_10X20&lt;/span&gt;, BinaryColor::On);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;loop&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// Hello World Text
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;println!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showing hola&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Text::new(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;HOLA&amp;#34;&lt;/span&gt;, Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;17&lt;/span&gt;), style).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        display.flush().unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        display.clear_buffer();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        FreeRtos::delay_ms(&lt;span style=&#34;color:#ae81ff&#34;&gt;2000&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;println!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showting mundo&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Text::new(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MUNDO&amp;#34;&lt;/span&gt;, Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;17&lt;/span&gt;), style).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        display.flush().unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        display.clear_buffer();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        FreeRtos::delay_ms(&lt;span style=&#34;color:#ae81ff&#34;&gt;2000&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// Create Circle
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;println!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showing circle&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Circle::new(Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;36&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Circle::new(Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;28&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         Circle::new(Point::new(&lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;38&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;).into_styled(PrimitiveStyle::with_stroke(BinaryColor::On, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)).draw(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; display).unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        display.flush().unwrap();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        display.clear_buffer();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        FreeRtos::delay_ms(&lt;span style=&#34;color:#ae81ff&#34;&gt;2000&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Upon inspection, you&amp;rsquo;ll notice that we&amp;rsquo;ve created a text and a circle. It&amp;rsquo;s important to configure your baud rate, as well as your SCL and SDA GPIO pin peripherals to ensure proper functionality.&lt;/p&gt;
 &lt;h3 id=&#34;execute&#34;&gt;Execute!&lt;/h3&gt;
 &lt;p&gt;Now, execute the following commands:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;cargo build &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cargo flash &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cargo flash monitor
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo build &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cargo flash &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cargo flash monitor
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     
     
     <item>
       <title>Books I&#39;m Reading for 2024</title>
-      <link>https://eddwin.dev/posts/books-im-reading-for-2024/</link>
+      <link>http://localhost:40727/posts/books-im-reading-for-2024/</link>
       <pubDate>Mon, 05 Feb 2024 22:47:45 -0300</pubDate>
       
-      <guid>https://eddwin.dev/posts/books-im-reading-for-2024/</guid>
+      <guid>http://localhost:40727/posts/books-im-reading-for-2024/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s the text with a bit more flavor I&amp;rsquo;ve got a stack of books I&amp;rsquo;m committed to diving into&lt;/p&gt;
-&lt;h3 id=&#34;efficient-linux-at-the-command-line-by-daniel-j-barret&#34;&gt;Efficient Linux at the Command Line&#39; by Daniel J. Barret&lt;/h3&gt;
+&lt;h3 id=&#34;efficient-linux-at-the-command-line-by-daniel-j-barret&#34;&gt;Efficient Linux at the Command Line&amp;rsquo; by Daniel J. Barret&lt;/h3&gt;
 &lt;p&gt;Talks about how to excel your skills when using the terminal&lt;/p&gt;
 &lt;p&gt;link: &lt;a href=&#34;https://a.co/d/3ROEBBL&#34;&gt;https://a.co/d/3ROEBBL&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;the-rust-programming-language-by-steve-klabnik--carol-nichols&#34;&gt;The Rust Programming Language&#39; by Steve Klabnik &amp;amp; Carol Nichols&lt;/h3&gt;
+&lt;h3 id=&#34;the-rust-programming-language-by-steve-klabnik--carol-nichols&#34;&gt;The Rust Programming Language&amp;rsquo; by Steve Klabnik &amp;amp; Carol Nichols&lt;/h3&gt;
 &lt;p&gt;Shows different ways to work with rust language from medium to advance&lt;/p&gt;
 &lt;p&gt;link: &lt;a href=&#34;https://a.co/d/crc7wGG&#34;&gt;https://a.co/d/crc7wGG&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;david-rockefeller-memoirs-by-an-author-i-cant-wait-to-discover&#34;&gt;David Rockefeller Memoirs&#39; by an Author I can&amp;rsquo;t wait to discover&lt;/h3&gt;
+&lt;h3 id=&#34;david-rockefeller-memoirs-by-an-author-i-cant-wait-to-discover&#34;&gt;David Rockefeller Memoirs&amp;rsquo; by an Author I can&amp;rsquo;t wait to discover&lt;/h3&gt;
 &lt;p&gt;Shows David&amp;rsquo;s life from point of view, and shows his family evolution&lt;/p&gt;
 &lt;p&gt;link: &lt;a href=&#34;https://a.co/d/1Ciz0QF&#34;&gt;https://a.co/d/1Ciz0QF&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;mañana-en-la-batalla-piensa-en-mí-by-the-talented-javier-marias&#34;&gt;Mañana en la Batalla Piensa en Mí&#39; by the talented Javier Marias&lt;/h3&gt;
+&lt;h3 id=&#34;mañana-en-la-batalla-piensa-en-mí-by-the-talented-javier-marias&#34;&gt;Mañana en la Batalla Piensa en Mí&amp;rsquo; by the talented Javier Marias&lt;/h3&gt;
 &lt;p&gt;It&amp;rsquo;s a nice funny story of two random people meeting and when they are about to have sex
 the girl dies in front of him; and he doesn&amp;rsquo;t know what to do.&lt;/p&gt;
 &lt;p&gt;link: &lt;a href=&#34;https://a.co/d/dOPJfHY&#34;&gt;https://a.co/d/dOPJfHY&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;seeing-like-a-state-by-the-insightful-james-c-scott&#34;&gt;Seeing like a State&#39; by the insightful James C. Scott&lt;/h3&gt;
+&lt;h3 id=&#34;seeing-like-a-state-by-the-insightful-james-c-scott&#34;&gt;Seeing like a State&amp;rsquo; by the insightful James C. Scott&lt;/h3&gt;
 &lt;p&gt;Shows a way governments when doing their best to enhance people&amp;rsquo;s lifes, they make it worse sometimes.&lt;/p&gt;
 &lt;p&gt;link: &lt;a href=&#34;https://a.co/d/5dHIrC3&#34;&gt;https://a.co/d/5dHIrC3&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h3&gt;
@@ -126,10 +154,10 @@ If I come across any exciting new titles, you can bet I&amp;rsquo;ll update this
     
     <item>
       <title>Working at Large Company in Latin America as TL</title>
-      <link>https://eddwin.dev/posts/working-at-large-company-in-latin-america/</link>
+      <link>http://localhost:40727/posts/working-at-large-company-in-latin-america-as-tl/</link>
       <pubDate>Fri, 24 Nov 2023 12:55:36 -0300</pubDate>
       
-      <guid>https://eddwin.dev/posts/working-at-large-company-in-latin-america/</guid>
+      <guid>http://localhost:40727/posts/working-at-large-company-in-latin-america-as-tl/</guid>
       <description>&lt;h2 id=&#34;onboarding&#34;&gt;OnBoarding&lt;/h2&gt;
 &lt;p&gt;Like any other company there is a onboarding path you must follow. this can be; configuring your VPN, Credential setup,
 etc..&lt;/p&gt;
@@ -137,7 +165,7 @@ etc..&lt;/p&gt;
 and the reason of this is due to the fact that you only know the tip of the iceberg.&lt;/p&gt;
 &lt;p&gt;after this you start getting basic tasks, and doing some shadow work with other collegue or supervisor. this is just to
 get you hands on making your first baby steps inside the company.&lt;/p&gt;
-&lt;p&gt;after you have&#39; learned to walk. you start getting more tasks and the flow starts going faster. and you know that the
+&lt;p&gt;after you have&amp;rsquo; learned to walk. you start getting more tasks and the flow starts going faster. and you know that the
 garden is not as greener as you expected it to be on the interview for the role.&lt;/p&gt;
 &lt;h2 id=&#34;day-to-day&#34;&gt;Day to day&lt;/h2&gt;
 &lt;p&gt;Here is when you start seeing all improvements you can make from your side to the company. due to the fact you are not
