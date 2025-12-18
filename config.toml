@@ -1,6 +1,6 @@
 baseURL = 'https://eddwin.dev/'
 languageCode = 'en-US'
-title = "Eddwin's Daily"
+title = "A Venezuelan Journey"
 theme = 'etch'
 
 [permalinks]
